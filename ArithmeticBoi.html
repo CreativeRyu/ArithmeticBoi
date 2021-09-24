@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Arithmetic Boi
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="ArithmeticBoi.css" media="screen" />
+    <script src="ArithmeticBoi.js"></script>
+</head>
+
+<body style="background:#c7c7c7">
+    <div class="gameWindow" onclick="askMathProblem();">
+        <p id="Frage" style="font-size: 40px">Arithmetic Boi</p>
+        <p id="Level">Press Start</p>
+        <p id="Points"></p>
+        <p id="Rounds"></p>
+    </div>
+
+    <div class="center">
+        <button id="plus" class="toggleButtons" style="background:#e083b6;" onclick="toggleOperator(this);">+</button>
+        <button id="minus" class="toggleButtons" style="background:white" onclick="toggleOperator(this);">-</button>
+        <button id="times" class="toggleButtons" style="background:white" onclick="toggleOperator(this);">*</button>
+        <button id="divided" class="toggleButtons" style="background:white" onclick="toggleOperator(this);">:</button>
+    </div>
+
+    <div class="center">
+        <form onsubmit="return checkInput();">
+            <!-- Eingabefeld -->
+            <input id="input" class="inputWindow" type="text">
+        </form>
+    </div>
+
+    <div class="center">
+        <button class="settingButtons" onclick="saveGameState();">Save</button>
+        <button class="settingButtons" onclick="loadGameState();">Load</button>
+        <button class="settingButtons" onclick="deleteGameState();">Delete</button>
+    </div>
+</body>
+
+</html>
